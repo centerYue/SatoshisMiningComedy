@@ -1,8 +1,163 @@
 .homeWrapper {
+  h1,
+  h2 {
+    margin: 0;
+  }
   .homeContainer {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 50px auto;
+    gap: 2rem;
+
+    .bannerLogoWrapper {
+      margin-top: 100px;
+    }
+    .mineInfo {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 1rem;
+      > h2 {
+        color: #fff;
+        font-family: Inter;
+        font-size: 24px;
+        font-weight: 900;
+        margin-bottom: 1rem;
+      }
+      .powerAndSmc {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .mineLogoWrapper {
+          max-width: 50%;
+          > img {
+            max-width: 100%;
+          }
+        }
+        .powerAndSMCDataWrapper {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          // justify-content: space-between;
+          color: #fff;
+          font-family: Inter;
+          align-items: flex-start;
+          gap: 0.6rem;
+
+          h2 {
+            font-size: 2rem;
+            font-weight: 400;
+          }
+          h1 {
+            font-size: 3rem;
+            font-weight: 900;
+          }
+          .powerWrapper {
+            display: flex;
+            flex-direction: column;
+          }
+          .smcWrapper {
+            display: flex;
+            flex-direction: column;
+            .buttonWrapper {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            }
+          }
+        }
+      }
+    }
+    .statisticData {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      font-family: Inter;
+      color: #fff;
+      gap: 1rem;
+
+      h2 {
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+      h1 {
+        font-size: 24px;
+        font-weight: 900;
+      }
+    }
+    .contractAndWallet {
+      width: 100%;
+      position: relative;
+    }
+    .FAQ {
+      width: 100%;
+      font-family: Inter;
+      color: #a4c5ed;
+      text-align: left;
+
+      > h1 {
+        color: #fff;
+        font-size: 32px;
+        font-weight: 600;
+      }
+      .faqWrapper {
+        > h2 {
+          font-size: 24px;
+          font-weight: 400;
+        }
+        > p {
+          font-family: Inter;
+          font-size: 24px;
+          font-weight: 400;
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .homeWrapper {
+    .homeContainer {
+      .bannerLogoWrapper {
+        margin-top: 0;
+      }
+      .mineInfo {
+        align-items: center;
+        .powerAndSmc {
+          gap: 2rem;
+          flex-direction: column;
+
+          .powerAndSMCDataWrapper {
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            h2 {
+              font-size: 1rem;
+            }
+            h1 {
+              font-size: 1.5rem;
+            }
+            .powerWrapper {
+              gap: 0.5rem;
+            }
+            .smcWrapper {
+              gap: 0.5rem;
+              .buttonWrapper {
+                gap: 1rem;
+              }
+            }
+          }
+        }
+      }
+      .statisticData {
+        flex-direction: column;
+      }
+    }
   }
 }
