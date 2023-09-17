@@ -1,0 +1,15 @@
+.MainContainer {
+  position: relative;
+  max-width: 1440px;
+  width: 90%;
+  margin: auto;
+  // margin-left: auto;
+
+  // margin-right: auto;
+  // padding: 70px 0;
+
+  @media (max-width: 768px) {
+    width: calc(100% - 30px);
+    padding: 50px 0;
+  }
+}
