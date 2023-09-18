@@ -65,7 +65,7 @@ const Home = () => {
           <div className={styles.powerAndSmc}>
             <div className={styles.mineLogoWrapper}>
               <img
-                src="/static/assets/images/Home/minelogo.png"
+                src="/static/assets/images/Home/mineLogo.png"
                 alt="minelogo"
               />
             </div>
