@@ -3,8 +3,10 @@ import React from "react";
 
 import WalletInfoDisplayer from "../../Components/WalletInfoDisplayer/WalletInfoDisplayer";
 import MainContainer from "../../Components/UI/MainContainer/MainContainer";
-import styles from "./Home.module.scss";
 import { Button } from "antd";
+import { formatNumber } from "../../Utils/utils";
+
+import styles from "./Home.module.scss";
 
 const faqList = [
   { id: "1", question: "Satosh’s Mining Comedy是什么？", answer: "lorem" },
@@ -70,12 +72,12 @@ const Home = () => {
             <div className={styles.powerAndSMCDataWrapper}>
               <div className={styles.powerWrapper}>
                 <h2>可用能量</h2>
-                <h1>{availablePower}</h1>
+                <h1>{formatNumber(availablePower)}</h1>
                 <Button type="primary">获取更多能量</Button>
               </div>
               <div className={styles.smcWrapper}>
                 <h2>SMC余额</h2>
-                <h1>{`${smcBalance} SMC`}</h1>
+                <h1>{`${formatNumber(smcBalance)} SMC`}</h1>
                 <div className={styles.buttonWrapper}>
                   <Button type="primary">开启矿机</Button>
                   <Button type="primary" danger>
@@ -92,7 +94,7 @@ const Home = () => {
           {statisticDataList.map((item) => (
             <div key={item.id}>
               <h2>{item.title}</h2>
-              <h1>{item.data}</h1>
+              <h1>{formatNumber(item.data)}</h1>
             </div>
           ))}
         </section>

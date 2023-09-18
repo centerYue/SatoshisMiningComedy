@@ -3,4 +3,11 @@
   justify-content: flex-end;
   align-items: center;
   padding: 20px 0;
+  width: 50%;
+  border-bottom: 1px solid white;
+}
+@media (max-width: 768px) {
+  .headerWrapper {
+    width: calc(100% - 30px);
+  }
 }
