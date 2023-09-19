@@ -61,23 +61,23 @@ const Home = () => {
   const walletAddr = "0x678910";
 
   const statisticDataList = [
-    { id: "1", title: "累计挖矿次数", data: cumuMineCount },
-    { id: "2", title: "累计获得SMC", data: cumuSMCGet },
-    { id: "3", title: "SMC余额", data: smcBalance },
+    { id: "1", title: "Cumulative Mining Times", data: cumuMineCount },
+    { id: "2", title: "Cumulative Mined Bitcome", data: cumuSMCGet },
+    { id: "3", title: "Your Bitcome Balance", data: smcBalance },
   ];
 
   const contractAndWalletInfoList = [
     {
       id: "1",
       displayIcon: "/static/assets/images/Home/contractIcon.png",
-      displayTitle: "已验证合约",
+      displayTitle: "Bitcome Contract",
       displayContent: verifiedContract,
       iconSide: "right",
     },
     {
       id: "2",
       displayIcon: "/static/assets/images/Home/walletIcon.png",
-      displayTitle: "当前钱包地址",
+      displayTitle: "Referral",
       displayContent: walletAddr,
       iconSide: "left",
     },
@@ -90,32 +90,34 @@ const Home = () => {
         </section>
 
         <section className={styles.mineInfo}>
-          <h2>{`当前矿工人数 ${currentMinerCount}`}</h2>
+          <h2>{`Miner ${currentMinerCount}`}</h2>
           <div className={styles.powerAndSmc}>
             <div className={styles.mineLogoWrapper}>
               <img
                 src="/static/assets/images/Home/mineLogo.png"
-                alt="minelogo"
+                alt="mineLogo"
               />
             </div>
             <div className={styles.powerAndSMCDataWrapper}>
               <div className={styles.powerWrapper}>
-                <h2>可用能量</h2>
+                <h2>Mining Pool</h2>
                 <h1>{formatNumber(availablePower)}</h1>
-                <Button type="primary">获取更多能量</Button>
+                <div className={styles.buttonWrapper}>
+                  <Button type="primary">Twitter</Button>
+                  <Button type="primary">Telegram</Button>
+                </div>
               </div>
               <div className={styles.smcWrapper}>
-                <h2>SMC余额</h2>
-                <h1>{`${formatNumber(smcBalance)} SMC`}</h1>
+                <h2>Your Eth</h2>
+                <h1>{`${formatNumber(smcBalance)} ETh`}</h1>
                 <div className={styles.buttonWrapper}>
-                  <Button type="primary">开启矿机</Button>
+                  <Button type="primary">Start Miner</Button>
                   <Button type="primary" danger>
-                    SMC基金
+                    Uniswap
                   </Button>
                 </div>
               </div>
             </div>
-            {/* </div> */}
           </div>
         </section>
 

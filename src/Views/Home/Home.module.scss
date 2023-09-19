@@ -64,11 +64,19 @@
           .powerWrapper {
             display: flex;
             flex-direction: column;
+            .buttonWrapper {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              gap: 0.5rem;
+            }
           }
           .smcWrapper {
             display: flex;
             flex-direction: column;
             .buttonWrapper {
+              width: 100%;
               display: flex;
               justify-content: space-between;
               align-items: center;
