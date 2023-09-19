@@ -22,7 +22,7 @@
       > h2 {
         color: #fff;
         font-family: Inter;
-        font-size: 24px;
+        font-size: 18px;
         font-weight: 900;
         margin-bottom: 1rem;
       }
@@ -49,38 +49,54 @@
           display: flex;
           flex-direction: column;
           justify-content: space-around;
+          flex-wrap: wrap;
+
           color: #fff;
           font-family: Inter;
           align-items: stretch;
 
           h2 {
-            font-size: 1.5rem;
+            font-size: 1rem;
             font-weight: 400;
           }
           h1 {
-            font-size: 2.5rem;
+            font-size: 1.5rem;
             font-weight: 900;
           }
           .powerWrapper {
             display: flex;
+            width: 100%;
             flex-direction: column;
+            gap: 0.2rem;
             .buttonWrapper {
               width: 100%;
               display: flex;
               justify-content: space-between;
-              align-items: center;
+              align-items: stretch;
               gap: 0.5rem;
+              a {
+                width: 50%;
+
+                button {
+                  width: 100%;
+                }
+              }
             }
           }
           .smcWrapper {
             display: flex;
+            width: 100%;
+            gap: 0.2rem;
             flex-direction: column;
             .buttonWrapper {
               width: 100%;
               display: flex;
               justify-content: space-between;
-              align-items: center;
+              align-items: stretch;
               gap: 0.5rem;
+              button {
+                width: 50%;
+              }
             }
           }
         }
@@ -95,12 +111,12 @@
       gap: 1rem;
 
       h2 {
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-weight: 400;
       }
 
       h1 {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
         font-weight: 900;
       }
     }
@@ -117,18 +133,18 @@
 
       > h1 {
         color: #fff;
-        font-size: 32px;
+        font-size: 26px;
         font-weight: 600;
         margin-bottom: 2rem;
       }
       .faqWrapper {
         > h2 {
-          font-size: 24px;
+          font-size: 18px;
           font-weight: 400;
         }
         > p {
           font-family: Inter;
-          font-size: 24px;
+          font-size: 18px;
           font-weight: 400;
           opacity: 0.5;
         }
@@ -153,10 +169,10 @@
           .powerAndSMCDataWrapper {
             flex-direction: row;
             justify-content: center;
-            width: 100%;
+            width: 90%;
             gap: 3rem;
             h2 {
-              font-size: 1rem;
+              font-size: 0.8rem;
             }
             h1 {
               font-size: 1.5rem;
@@ -170,7 +186,7 @@
               align-items: center;
 
               .buttonWrapper {
-                gap: 1rem;
+                // gap: 1rem;
               }
             }
           }

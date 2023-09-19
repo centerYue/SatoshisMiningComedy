@@ -22,8 +22,13 @@ const Footer = () => {
       <h3>Copyright © 2023</h3>
       <div className={styles.socialWrapper}>
         {socialList.map((item) => (
-          <a href={item.link} rel="noopenner noreferrer" target="_blank">
-            <img key={item.id} src={item.imgSrc} alt={item.name} />
+          <a
+            key={item.id}
+            href={item.link}
+            rel="noopenner noreferrer"
+            target="_blank"
+          >
+            <img src={item.imgSrc} alt={item.name} />
           </a>
         ))}
       </div>

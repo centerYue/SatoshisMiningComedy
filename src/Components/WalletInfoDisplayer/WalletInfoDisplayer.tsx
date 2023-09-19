@@ -12,6 +12,7 @@ interface infoType {
   displayTitle: string;
   displayContent: string;
   iconSide: string;
+  isReferral: boolean;
 }
 
 const WalletInfoDisplayer = ({ info }: props) => {
@@ -21,8 +22,16 @@ const WalletInfoDisplayer = ({ info }: props) => {
         <img src={info.displayIcon} alt={info.displayTitle} />
       )}
       <div className={styles.contentWrapper}>
-        <h2 id="title">{info.displayTitle}: </h2>
-        <h2>{info.displayContent || "-"}</h2>
+        <h2 id="title">
+          {info.displayTitle}: {info.displayContent || "-"}
+        </h2>
+
+        {info.isReferral && (
+          <>
+            <h2 id="title">Total Referral: {info.displayContent || "-"}</h2>
+            <h2 id="title">Referral Rewards: {info.displayContent || "-"}</h2>
+          </>
+        )}
       </div>
       {info.iconSide === "right" && (
         <img src={info.displayIcon} alt={info.displayTitle} />

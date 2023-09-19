@@ -73,6 +73,7 @@ const Home = () => {
       displayTitle: "Bitcome Contract",
       displayContent: verifiedContract,
       iconSide: "right",
+      isReferral: false,
     },
     {
       id: "2",
@@ -80,6 +81,7 @@ const Home = () => {
       displayTitle: "Referral",
       displayContent: walletAddr,
       iconSide: "left",
+      isReferral: true,
     },
   ];
   return (
@@ -90,7 +92,7 @@ const Home = () => {
         </section>
 
         <section className={styles.mineInfo}>
-          <h2>{`Miner ${currentMinerCount}`}</h2>
+          <h2>{`Miner: ${currentMinerCount}`}</h2>
           <div className={styles.powerAndSmc}>
             <div className={styles.mineLogoWrapper}>
               <img
@@ -103,8 +105,20 @@ const Home = () => {
                 <h2>Mining Pool</h2>
                 <h1>{formatNumber(availablePower)}</h1>
                 <div className={styles.buttonWrapper}>
-                  <Button type="primary">Twitter</Button>
-                  <Button type="primary">Telegram</Button>
+                  <a
+                    href="https://t.me/satoshiminingcomedy"
+                    rel="noopenner noreferrer"
+                    target="_blank"
+                  >
+                    <Button type="primary">Twitter</Button>
+                  </a>
+                  <a
+                    href="https://twitter.com/Smc_Bitcome"
+                    rel="noopenner noreferrer"
+                    target="_blank"
+                  >
+                    <Button type="primary">Telegram</Button>
+                  </a>
                 </div>
               </div>
               <div className={styles.smcWrapper}>

@@ -5,11 +5,13 @@
     lightgray 50% / cover no-repeat;
   position: relative;
   margin-top: 10%;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   display: flex;
 
   > img {
     max-width: 25%;
+    max-height: 25%;
+
     height: auto;
     width: auto;
   }
@@ -17,15 +19,16 @@
   .contentWrapper {
     width: 100%;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     gap: 0.5rem;
     padding: 25px;
 
     > h2 {
       color: #fff;
       font-family: Inter;
-      font-size: 24px;
+      font-size: 1rem;
       font-style: normal;
       font-weight: 400;
       line-height: normal;
