@@ -9,16 +9,45 @@ import { formatNumber } from "../../Utils/utils";
 import styles from "./Home.module.scss";
 
 const faqList = [
-  { id: "1", question: "Satosh’s Mining Comedy是什么？", answer: "lorem" },
+  {
+    id: "1",
+    question: "What is Satoshi’s Mining Comedy ($Bitcome)?",
+    answer:
+      "Similar to Bitcoin mining, Satoshi’s Mining Comedy introduced a new decentralized mining system that allows miners to mine $Bitcome by interacting with smart contracts.",
+  },
   {
     id: "2",
-    question: "Satosh’s Mining Comedy的代币价值是什么？",
-    answer: "lorem",
+    question: "What is the value of the $Bitcome token?",
+    answer:
+      "Bitcome is a fair mining project that can only be mined in a manner similar to BTC mining. There is no presale and no tokens are allocated to the team.",
   },
   {
     id: "3",
-    question: "Satosh’s Mining Comedy的代币价值是什么？",
-    answer: "lorem",
+    question: "What is the total supply of Bitcome?",
+    answer: "21,000,000,000,000",
+  },
+  {
+    id: "4",
+    question: "Where can I mine $Bitcome?",
+    answer:
+      "You can mine $Bitcome on the official website or by interacting with the mining contract.",
+  },
+  {
+    id: "5",
+    question: "How does Bitcome Mining work?",
+    answer:
+      "Bitcome Mining is set to launch in late September and will last for just 7 days. The mining contract will generate 3 trillion Bitcome daily, or 34,722,222 Bitcome per second, of which 25,000,000 is for mining and 9,722,222 is for the team wallet. Within 7 days, all 21 trillion Bitcome tokens will be fully mined.",
+  },
+  {
+    id: "6",
+    question: "When will Bitcome be listed for trading?",
+    answer:
+      "Theoretically, Bitcome will be available for trading upon the mining launch. The team won't provide liquidity since they mine just like everyone else and don't reserve tokens initially.",
+  },
+  {
+    id: "7",
+    question: "Tax?",
+    answer: "3% for marketing, 3% for dividends, and 3% for LP.",
   },
 ];
 
@@ -106,11 +135,11 @@ const Home = () => {
         </section>
 
         <section className={styles.FAQ}>
-          <h1>常见问题</h1>
+          <h1>FAQ</h1>
           {faqList.map((item) => (
             <div key={item.id} className={styles.faqWrapper}>
-              <h2>{item.question}</h2>
-              <p>{item.answer}</p>
+              <h2>Q: {item.question}</h2>
+              <p>A: {item.answer}</p>
             </div>
           ))}
         </section>
